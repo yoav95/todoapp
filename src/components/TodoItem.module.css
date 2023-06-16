@@ -1,0 +1,67 @@
+.todo {
+  position: relative;
+  min-width: 800px;
+  padding: 1rem;
+  background-color: var(--color-third);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.todo:hover {
+  /* transition: background 0.3s ease; */
+  background-color: var(--color-second);
+  transition: all 0.3s ease-in-out;
+}
+
+.date {
+  font-size: 0.7rem;
+}
+
+.selected {
+  height: 120px;
+  border: 1px solid white;
+  background-color: var(--color-second);
+  transition: all 0.3s ease-in-out;
+}
+
+.selected:hover {
+  background-color: var(--color-second);
+  transition: all 0.3s ease;
+}
+
+.control {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.3rem;
+}
+
+.control button {
+  background-color: var(--color-third);
+  border: none;
+  padding: 0.2rem 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.todo-value {
+  font-size: 1.3rem;
+}
+
+.checked {
+  background-color: var(--color-fourth);
+}
+
+.checked .todo-value {
+  text-decoration: line-through;
+}
+
+.checked:hover {
+  background-color: var(--color-fourth);
+}

@@ -1,0 +1,26 @@
+.app {
+  width: 80%;
+  margin: auto;
+  padding: 3rem;
+}
+
+.content {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.header h1 {
+  font-weight: bold;
+}
+.msg {
+  align-self: center;
+}
