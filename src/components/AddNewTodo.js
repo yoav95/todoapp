@@ -3,14 +3,24 @@ import styles from "./AddNewTodo.module.css";
 import DbContext from "../store/db-context";
 
 const AddNewTodo = (props) => {
-  const [todoInputValue, setTodoInputValue] = useState();
+  const [todoInputValue, setTodoInputValue] = useState("");
+  const [todoInputInvalid, setTodoInputInvalid] = useState(true);
   const dbCtx = useContext(DbContext);
   const handleInputChange = (event) => {
     setTodoInputValue(event.target.value);
+    if (todoInputInvalid === "" || todoInputValue.trim().length < 5) {
+      setTodoInputInvalid(true);
+    } else {
+      setTodoInputInvalid(false);
+    }
   };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    if (todoInputInvalid) {
+      alert("invalid");
+      return;
+    }
     const todayString = new Date().toDateString();
     const newTodo = { todo: todoInputValue, date: todayString, checked: false };
     dbCtx

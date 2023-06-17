@@ -1,7 +1,8 @@
 .add-new-todo {
-  /* background-color: var(--color-third); */
+  background-color: var(--color-second);
+  height: 100px;
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -36,9 +37,14 @@
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
-  background: var(--color-second);
+  background: var(--color-third);
   color: white;
+  transition: all 0.3s ease;
   animation: bump 0.8s ease-in-out;
+}
+
+.add-new-todo button:hover {
+  background-color: var(--color-fourth);
 }
 
 @keyframes bump {

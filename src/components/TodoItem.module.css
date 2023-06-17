@@ -1,6 +1,6 @@
 .todo {
   position: relative;
-  min-width: 800px;
+  width: 100%;
   padding: 1rem;
   background-color: var(--color-third);
   display: flex;
@@ -48,6 +48,11 @@
   color: white;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control button:hover {
+  background-color: var(--color-one);
 }
 
 .todo-value {

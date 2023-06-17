@@ -50,7 +50,6 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <header className={styles.header}></header>
       <AddNewTodo />
       <div className={styles.content}>
         {isLoading ? (
